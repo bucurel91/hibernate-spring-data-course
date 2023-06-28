@@ -1,0 +1,29 @@
+ACID
+Ce e ACID?
+ATOMICITY - all or nothing( toate queries, fiind si un set de operatiuni, trebuie sa se execute fara greseli, altfel
+se va face rollback la tranzactie. Asta se face ca sa nu introduci date incomplete in baza de date, de exemplu
+sa se faca update la un field, dar la al doilea sa se intimple ceva si sa nu se updateze alt field)
+CONSISTENCY - changes do not violates the constraints ( schimbarile nu trebuie sa afecteze constrangerile)
+ISOLATION - cind se citeste informatia in interiorul tranzactiei, noi vedem datele originale,
+odata ce se face commit la tranzactie, datele se persista si nu mai avem acces la datele vechi
+DURABILITY - odata ce o tranzactie a fost commituita, ea asa si ramine
+
+============================================================================================================================
+
+CONCURENTA in baza de date, cum sa rezolvam chestii cind avem mai multe threduri care fac update la niste date concomitent:
+Locking este o solutie ->
+
+        Pessimistic locking: se foloseste un database lock, pentru a preveni executarea altor tranzactii si va permite
+        tranzactiilor de a se executa secvential
+
+        Optimistic locking: se foloseste o proprietate de versiune, care se verifica la orce update
+
+============================================================================================================================
+
+RDBMS - Relational database management system
+    4 caracteristici ->
+        Data Definition - se definesc datele care vor fi urmarite
+        Data Manipulation - add, update or remove data
+        Data Retrieval - extragerea si raportarea a datelor in baza de date
+        Administration -    definirea userilor in sistem, securitate, monitoring, administrarea sistemului
+

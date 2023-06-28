@@ -1,0 +1,5 @@
+Liquibase - se foloseste ptr intreprinderi mari, cu diferite environmente.
+Flyway -  e folosit in 90% din cazuri de aplicatii care nu au nevoie capabilitati aditionale.
+
+Comenzi Liquibase
+ - generateChangeLog: iti genereaza un fixle xml cu changeset cu starea curenta a bazei de date

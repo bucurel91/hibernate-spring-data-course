@@ -1,0 +1,10 @@
+DDL - data definition language
+DML - data manipulation language
+Proprieteti ptr DDL
+  none: face disable la schema generation tool
+  create-only: creaza schema bazei de date doar pe baza la JPA Entities
+  drop: face drop la tabele din baza de date pe baza la JPA Entities
+  create: face drop si recreaza schema bazaei de date
+  create-drop: face drop si recreaza schema bazaei de date, si va face drop cind se inchide baza de date
+  validate: valideaza schema, arunca erroare daca ceva nu e in regula
+  update: face update la schema pe baza la JPA Entities

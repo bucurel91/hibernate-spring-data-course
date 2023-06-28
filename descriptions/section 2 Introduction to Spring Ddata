@@ -1,0 +1,2 @@
+Spring JPA e bun de folosit cind facem operatiuni nu foarte complicate, sa insertam, sa scoatem, sa facem update etc.
+Nu e bun de folosit la batch operatii, cind se fac queries cu un set mare de date.

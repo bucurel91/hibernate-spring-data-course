@@ -1,0 +1,1 @@
+Testele deobicei se ruleaza in tranzactii aparte, dupa orce test se curata contextul sau se face rollback la tranzactie

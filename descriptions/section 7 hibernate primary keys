@@ -1,0 +1,14 @@
+Numeric primary keys:
+        GenerationType.AUTO - Let hibernate pick - best practice is to specify
+        GenerationType.SEQUENCE - use database sequence (not a feature of MySQL)
+        GenerationType.IDENTITY - use auto-incremented database columns
+        GenerationType.TABLE - use database table to simulate sequence
+
+
+UUID primary keys: (Universal Unique Identifier, a unique 128 bit value)
+        Cel mai folosit ca primary key si ne poate ajuta la index performance (foloseste mai mult disk spatiu)
+
+Pe care de folosit?
+
+    Small tables - in jur de citeva milioane - se foloseste Integer sau long
+    Large tables - zeci de milioane - de folosit UUID ( daca avem suficient spatiu pe disk)
