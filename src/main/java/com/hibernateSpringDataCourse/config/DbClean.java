@@ -12,6 +12,7 @@ public class DbClean {
     @Bean
     public FlywayMigrationStrategy clean() {
         return flyway -> {
+            flyway.repair();
             flyway.clean();
             flyway.migrate();
         };

@@ -1,8 +1,10 @@
 package com.hibernateSpringDataCourse.bootstrap;
 
+import com.hibernateSpringDataCourse.domain.Author;
 import com.hibernateSpringDataCourse.domain.AuthorUuid;
 import com.hibernateSpringDataCourse.domain.Book;
 import com.hibernateSpringDataCourse.domain.BookUuid;
+import com.hibernateSpringDataCourse.repository.AuthorRepository;
 import com.hibernateSpringDataCourse.repository.AuthorUuidRepository;
 import com.hibernateSpringDataCourse.repository.BookRepository;
 import com.hibernateSpringDataCourse.repository.BookUuidRepository;
@@ -18,10 +20,13 @@ public class DataInitializer implements CommandLineRunner {
     private final AuthorUuidRepository authorUuidRepository;
     private final BookUuidRepository bookUuidRepository;
 
-    public DataInitializer(BookRepository repository, AuthorUuidRepository authorUuidRepository, BookUuidRepository bookUuidRepository) {
+    private final AuthorRepository authorRepository;
+
+    public DataInitializer(BookRepository repository, AuthorUuidRepository authorUuidRepository, BookUuidRepository bookUuidRepository, AuthorRepository authorRepository) {
         this.repository = repository;
         this.authorUuidRepository = authorUuidRepository;
         this.bookUuidRepository = bookUuidRepository;
+        this.authorRepository = authorRepository;
     }
 
     @Override
@@ -49,5 +54,11 @@ public class DataInitializer implements CommandLineRunner {
         bookUuid.setTitle("Never split the difference");
         bookUuidRepository.save(bookUuid);
         System.out.println("Saved Book UUID: " + bookUuid.getId());
+
+        Author author =  new Author();
+        author.setFirstName("Igor");
+        author.setLastName("Bucur");
+
+        authorRepository.save(author);
     }
 }
